@@ -1,0 +1,7 @@
+[user]
+	email = 1261340248@qq.com
+	name = cczzhh
+[alias]
+	ga = git add
+	gm = git commit -m
+	gp = git push orgin master
