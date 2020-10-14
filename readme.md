@@ -13,6 +13,11 @@ to delete a s-l, you can `rm -rf symbolic-file`
 for oh-my-zsh themes and plugins are under **~/.oh-my-zsh**.For plugins,when you clone omz from github,there are already many plugins.You can also `git clone` usful plugins such as `zsh-autosuggestions` `autojump` `zsh-syntax-highlighting`
 <br>
 To write a script to configure these is not easy ,I'l have a try.
+## tips writing scripts
+`export PATH="$PATH:/path/to/program/bin"` <br>
+`export` set env var.` export -p` list all env var <br> 
+export can only change env-var for the current env.<br>
+`$HOME $PATH ` are usfle
 
 ## change shell
 when you want to use zsh,you need yo change you current user shell.(** terminal is quite different from shell.Shell just accept cmd and transports to terminal**) <br>
