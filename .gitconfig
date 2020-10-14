@@ -3,5 +3,7 @@
 	name = cczzhh
 [alias]
 	ga = git add
-	gm = git commit -m
+	gitm =git commit -m
 	gp = git push orgin master
+	graph = log --all --graph --decorate --oneline
+
