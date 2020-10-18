@@ -14,13 +14,27 @@ for oh-my-zsh themes and plugins are under **~/.oh-my-zsh**.For plugins,when you
 <br>
 To write a script to configure these is not easy ,I'l have a try.
 ## tips writing scripts
+### export
 `export PATH="$PATH:/path/to/program/bin"` <br>
 `export` set env var.` export -p` list all env var <br> 
 export can only change env-var for the current env.<br>
-`$HOME $PATH ` are usfle
+`$HOME $PATH ` are usful
+### [@] 
+**@equals to "*"** <br>
+`a=(1 2 3 4) //a is an array defined by whitespace`
+`echo ${#a[@]}  //return a.size 4  `
+`echo ${a[2]}`
+`echo ${a[@]} //return entire content of a`
+```
+for program in ${PROGRAMS[@]}; do
+  stow -v --target=$HOME $program
+  echo "Configuring $program"
+done
+```
+
 
 ## change shell
-when you want to use zsh,you need yo change you current user shell.(** terminal is quite different from shell.Shell just accept cmd and transports to terminal**) <br>
+when you want to use zsh,you need yo change you current user shell.(**terminal is quite different from shell.Shell just accept cmd and transports to terminal**) <br>
 firstly, you can use `echo $SHELL` 'cat /ctc/shell' cmd
 `chsh` can help. `chsh -s "while shell" ` 
 In fact,what chsh does is to change the `/etc/passwd` file `cat /etc/passwd | grep "username(czh)"` you can see the diff. 
