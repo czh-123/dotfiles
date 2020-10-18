@@ -6,16 +6,16 @@
 [pull]
     rebase = false
 [core]
-	editor = nvim
+	editor = vim
 	excludesfile = ~/.gitignore_global
 [color]
 	ui = auto
 [merge]
-    tool = nvim  #vimdiff
+    tool = vimdiff #nvim
     conflictstyle = diff3
     prompt = false
-[mergetool "nvim"]
-    cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+#[mergetool "nvim"]
+#    cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 # automatically launch merge tool without displaying a prompt
 [alias]
     graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %C(dim white)(%aN, %ar)'
