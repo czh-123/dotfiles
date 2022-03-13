@@ -11,6 +11,35 @@ to delete a s-l, you can `rm -rf symbolic-file`
 ## zsh
  zsh is one kind of shell you can extend it's function by oh-my-zsh ,antigen,zinit and so on. The key is to organize your plugins.<br>
 for oh-my-zsh themes and plugins are under **~/.oh-my-zsh**.For plugins,when you clone omz from github,there are already many plugins.You can also `git clone` usful plugins such as `zsh-autosuggestions` `autojump` `zsh-syntax-highlighting`
+
+### Details for zsh
+1. install zsh : `sudo apt-get install zsh`
+2. install oh-my-zsh : 
+```
+wget https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh
+chmod +x install.sh
+```
+Considering github may be slow, you can:
+`vim install.sh`
+```
+#Default settings
+REPO=${REPO:-mirrors/oh-my-zsh}
+REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
+```
+3. install plugins
+```
+git clone https://gitee.com/hailin_cool/zsh-autosuggestions.git  $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
+
+```
+echo "source ${ZSH_CUSTOM}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${HOME}/dotfiles/zsh/.zshrc
+
+```
+4. custom config 
+prefer ys : in zshrc : ZSH_THEME="ys"
+
 <br>
 To write a script to configure these is not easy ,I'l have a try.
 ## tips writing scripts

@@ -33,9 +33,13 @@ else
 fi
 
 # zsh wait 
-
+echo "begin install zsh"
+wget https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh
+chmod +x install.sh
+echo "start exe install.sh May need to switch to gitee"
+echo "helper website  https://iogogogo.gitee.io/2021/07/05/china-mirrors-oh-my-zsh/#!"
+./install.sh
 
 # ssh conf
 
-#vim conf 
-
+# vim conf 
